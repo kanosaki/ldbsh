@@ -54,8 +54,8 @@ $ ldbsh <LevelDB dir> <command>
 You can use basic commands (see above) and following additional commands.
 
 ```
-load :: (no arguments) Load tsv file (see Batch mode)
-join :: (no arguments) Join key list file (see Batch mode)
+load :: (no arguments) Load tsv file
+join :: (no arguments) Join key list file like SQL JOIN
 dump :: (no arguments) Alias to 'list'
 ```
 
