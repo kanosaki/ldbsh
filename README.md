@@ -31,6 +31,7 @@ join <filename>   :: Join key list file (see Batch mode)
 ### Examples
 
 ```
+$ ldbsh <LevelDB dir>
 > put somekey somevalue
 > get somekey
 somevalue
@@ -42,7 +43,7 @@ anotherkey anothervalue
 
 ## Batch mode
 
-You can give command follow the <LevelDB dir> argument.
+You can give a command from program arguments like this:
 
 ```
 $ ldbsh <LevelDB dir> <command>
@@ -59,6 +60,9 @@ dump :: (no arguments) Alias to 'list'
 ```
 
 ### Examples
+
+Prepare files for example
+
 `data.tsv` (A tab separated file with 2 colums)
 ```tsv
 a 1
@@ -85,6 +89,13 @@ d 4
 $ ldbsh <LevelDB dir> join keys.txt
 a 1
 c 3
+# Read from stdin when no arguments given.
+bash-3.2$ ldbsh foo join <<EOS
+> b
+> d
+> EOS
+b 2
+b 4
 ```
 
 ## License
