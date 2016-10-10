@@ -36,13 +36,13 @@ func (c *Context) NormalCommands() []*Command {
 		{[]string{"put", "p"}, 2, c.handlePut, "Put key value"},
 		{[]string{"list", "ls", "l"}, 0, c.handleListAll, "List all entires"},
 		{[]string{"list", "ls", "l"}, 1, c.handleListPrefix, "List entries with specified"},
+		{[]string{"join"}, 1, c.handleJoinFilename, "Get key"},
+		{[]string{"load"}, 1, c.handleLoadFilename, "Put key value"},
 	}
 }
 
 func (c *Context) BatchCommands() []*Command {
 	return []*Command{
-		{[]string{"join"}, 1, c.handleJoinFilename, "Get key"},
-		{[]string{"load"}, 1, c.handleLoadFilename, "Put key value"},
 		{[]string{"join"}, 0, c.handleJoinStdin, "Get key"},
 		{[]string{"load"}, 0, c.handleLoadStdin, "Put key value"},
 		{[]string{"dump"}, 0, c.handleListAll, "List all entires"},
