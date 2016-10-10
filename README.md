@@ -54,8 +54,10 @@ $ ldbsh <LevelDB dir> <command>
 You can use basic commands (see above) and following additional commands.
 
 ```
-load :: (no arguments) Load tsv file
-join :: (no arguments) Join key list file like SQL JOIN
+load :: (no arguments) Load tsv data from stdin
+join :: (no arguments) 
+  SQL Join like operation. 
+  Read key list data from stdin and output key-value pair.
 dump :: (no arguments) Alias to 'list'
 ```
 
