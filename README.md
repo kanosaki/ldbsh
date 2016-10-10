@@ -90,7 +90,7 @@ $ ldbsh <LevelDB dir> join keys.txt
 a 1
 c 3
 # Read from stdin when no arguments given.
-bash-3.2$ ldbsh foo join <<EOS
+$ ldbsh foo join <<EOS
 > b
 > d
 > EOS
