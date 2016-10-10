@@ -47,4 +47,3 @@ func SplitCommand(line string) []string {
 	}
 	return ret
 }
-
